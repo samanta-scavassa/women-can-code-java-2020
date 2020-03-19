@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Placa {
-    private List<Componente> componentes = new ArrayList<Componente>();
+    private List<Componente> componentes = new ArrayList<>();
 
-    public void addComponente(Componente componente) {
+    public void addComponente(Componente componente) throws IllegalArgumentException {
+        if (componentes.size() >= 50) {
+            throw new IllegalArgumentException("Ultrapassado o limite de componentes");
+        }
         componentes.add(componente);
     }
 
