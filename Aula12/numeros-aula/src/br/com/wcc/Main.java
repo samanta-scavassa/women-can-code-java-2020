@@ -2,6 +2,8 @@ package br.com.wcc;
 
 import br.com.wcc.exception.TabuadaInvalidaException;
 import br.com.wcc.fibonacci.Fibonacci;
+import br.com.wcc.somador.Somador;
+import br.com.wcc.somador.Somador2;
 import br.com.wcc.somador.SomadorDouble;
 import br.com.wcc.somador.SomadorFloat;
 import br.com.wcc.somador.SomadorInteger;
@@ -13,6 +15,7 @@ public class Main {
         imprimirSomas();
         imprimeTabuada();
         escreveFibonacci();
+        System.out.println("Soma: " + Somador2.somar(1.1, 2.2, 3.3, 4.4));
     }
 
     private static void escreveFibonacci() {
