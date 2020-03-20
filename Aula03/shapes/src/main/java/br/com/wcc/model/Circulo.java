@@ -9,12 +9,19 @@ public class Circulo implements Shape {
     private final BigDecimal raio;
 
     public Circulo(BigDecimal raio) {
+        if (raio == null || raio.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Raio não pode ser nulo");
+        }
+
         this.raio = raio;
     }
 
     @Override
     public BigDecimal getPerimetro() {
-        return DOIS.multiply(PI).multiply(raio).round(MATH_CONTEXT);
+        return DOIS
+                .multiply(PI)
+                .multiply(raio)
+                .round(MATH_CONTEXT);
     }
 
     @Override
