@@ -5,6 +5,7 @@ import br.com.wcc.model.Quadrado;
 import br.com.wcc.model.Retangulo;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Main {
 
@@ -41,5 +42,8 @@ public class Main {
         Quadrado quadrado = new Quadrado(new BigDecimal("4"));
         System.out.println("Area: " + quadrado.getArea());
         System.out.println("Perimetro: " + quadrado.getPerimetro());
+
+        while (true) {
+        }
     }
 }
