@@ -4,12 +4,17 @@ import java.io.FileReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import app.file.ResourceFileReader;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        FileReader file = new FileReader("resources/aulas.csv");
+
+
+        final ResourceFileReader resourceFileReader = new ResourceFileReader();
+        final FileReader file = resourceFileReader.getFileReaderFromResource("aulas.csv");
+
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withHeader().parse(file);
         for (CSVRecord csvRecord : records) {
             String aula = csvRecord.get("Nome da Aula");
