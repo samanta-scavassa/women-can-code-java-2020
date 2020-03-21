@@ -20,14 +20,11 @@ public class App {
             String aula = csvRecord.get("Nome da Aula");
             String conteudo = csvRecord.get("Conteúdo");
             LocalDate dia = LocalDate.parse(csvRecord.get("Dia"), DateTimeFormatter.ofPattern("dd/MM/yy"));
-            StringBuilder builder = new StringBuilder();
-            builder.append("Nome da aula: ")
-                .append(aula)
-                .append(", Conteúdo: ")
-                .append(conteudo)
-                .append(", data: ")
-                .append(dia.format(DateTimeFormatter.ofPattern("dd MMM yyyy")));
-            System.out.println(builder.toString());
+            String linha = "Nome da aula: " +  aula +
+                    ", Conteúdo: " + conteudo +
+                    ", data: " +
+                    dia.format(DateTimeFormatter.ofPattern("dd MMM yyyy"));
+            System.out.println(linha);
         }
     }
 }
