@@ -1,7 +1,13 @@
 package br.com.wcc.somador;
 
-public interface Somador<T extends Number> {
-    T somar(T num1, T num2);
+public interface Somador<N extends Number> {
+    /**
+     * Retorna a soma de num1 e num2
+     * @param num1
+     * @param num2
+     * @return
+     */
+    N somar(N num1, N num2);
 
-    T somar(T... numeros);
+    N somar(N... numeros);
 }
