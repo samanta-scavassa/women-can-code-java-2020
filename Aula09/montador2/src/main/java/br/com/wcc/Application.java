@@ -2,6 +2,7 @@ package br.com.wcc;
 
 import br.com.wcc.model.Componente;
 import br.com.wcc.model.Contador;
+import br.com.wcc.model.CriadorPlaca;
 import br.com.wcc.model.Montador;
 import br.com.wcc.model.Placa;
 
@@ -11,8 +12,8 @@ import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
-        Montador montador = new Montador();
-        final List<Placa> placas = montador.montarPlacas(15);
+        final Montador montador = new Montador(new CriadorPlaca());
+        final List<Placa> placas = montador.montarPlacas(10);
 
         imprimirPlacas(placas);
         imprimirContador(placas);

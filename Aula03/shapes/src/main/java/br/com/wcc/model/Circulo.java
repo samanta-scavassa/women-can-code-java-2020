@@ -10,7 +10,7 @@ public class Circulo implements Shape {
 
     public Circulo(BigDecimal raio) {
         if (raio == null || raio.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("Raio não pode ser nulo");
+            throw new IllegalArgumentException("Raio não pode ser nulo ou <= 0");
         }
 
         this.raio = raio;
